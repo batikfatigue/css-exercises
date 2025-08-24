@@ -17,9 +17,32 @@ body {
 
 .modal {
   background: white;
-  width: 480px;
+  width: 150px;
   border-radius: 10px;
   box-shadow: 2px 4px 16px rgba(0,0,0,.2);
+  display: flex;
+  padding: 15px;
+  gap: 15px;
+}
+
+/* didnt need flex shrink to be set to 0 for icon as its not the flex item
++ the flex item's min width is set to the icon width, so the bug wont happen */
+
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.header {
+  font-size: 120%;
+  /* should have adjusted font-weight here */
+}
+
+.top {
+  align-items: baseline; /* should be center */
+  display: flex;
+  justify-content: space-between;
 }
 
 .icon {
